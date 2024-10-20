@@ -23,6 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install build
 
+      - name: Clean up old builds
+        run: |
+          rm -rf dist/*
+
       - name: Build the package
         run: python -m build
 
